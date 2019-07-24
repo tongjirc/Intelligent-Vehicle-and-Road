@@ -1,0 +1,8 @@
+prefix=/home/tongjirc/catkin_ws/devel
+
+Name: svo_msgs
+Description: Description of svo_msgs
+Version: 0.0.0
+Cflags: -I/home/tongjirc/catkin_ws/devel/include
+Libs: -L/home/tongjirc/catkin_ws/devel/lib 
+Requires: message_runtime geometry_msgs

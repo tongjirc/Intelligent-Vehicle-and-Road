@@ -1,0 +1,21 @@
+
+(cl:in-package :asdf)
+
+(defsystem "marvelmind_nav-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
+  :components ((:file "_package")
+    (:file "beacon_distance" :depends-on ("_package_beacon_distance"))
+    (:file "_package_beacon_distance" :depends-on ("_package"))
+    (:file "beacon_pos_a" :depends-on ("_package_beacon_pos_a"))
+    (:file "_package_beacon_pos_a" :depends-on ("_package"))
+    (:file "hedge_imu_fusion" :depends-on ("_package_hedge_imu_fusion"))
+    (:file "_package_hedge_imu_fusion" :depends-on ("_package"))
+    (:file "hedge_imu_raw" :depends-on ("_package_hedge_imu_raw"))
+    (:file "_package_hedge_imu_raw" :depends-on ("_package"))
+    (:file "hedge_pos" :depends-on ("_package_hedge_pos"))
+    (:file "_package_hedge_pos" :depends-on ("_package"))
+    (:file "hedge_pos_a" :depends-on ("_package_hedge_pos_a"))
+    (:file "_package_hedge_pos_a" :depends-on ("_package"))
+    (:file "hedge_pos_ang" :depends-on ("_package_hedge_pos_ang"))
+    (:file "_package_hedge_pos_ang" :depends-on ("_package"))
+  ))

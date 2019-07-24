@@ -1,0 +1,14 @@
+-I/usr/include/qt4
+-I/usr/include/qt4/QtGui
+-I/usr/include/qt4/QtCore
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="rqt_ptam"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-D$<$<NOT:$<CONFIG:Debug>>:QT_NO_DEBUG>
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-DBOOST_TT_HAS_OPERATOR_HPP_INCLUDED
+-DBOOST_NO_TEMPLATE_PARTIAL_SPECIALIZATION
+-o
+/home/tongjirc/catkin_ws/build/ethzasl_ptam/rqt_ptam/include/rqt_ptam/moc_ratio_layouted_frame.cxx
+/home/tongjirc/catkin_ws/src/ethzasl_ptam/rqt_ptam/include/rqt_ptam/ratio_layouted_frame.h

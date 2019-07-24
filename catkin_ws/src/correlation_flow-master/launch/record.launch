@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <include file="$(find vicon_xb)/launch/vicon_xb.launch"/>
+
+    <include file="$(find px4flow)/launch/px4flow.launch"/>
+
+<!--    <include file="$(find myahrs_driver)/launch/myahrs_driver.launch"/> -->
+
+<!--    <node pkg="correlation_flow" type="imagepub.py" name="imagepub" /> -->
+
+<!--    <include file="$(find correlation_flow)/launch/camera.launch"/> -->
+
+    <include file="$(find ueye_cam)/launch/bayer_rggb_image_proc.launch"/>
+
+    <include file="$(find correlation_flow)/launch/correlation_flow.launch"/>
+
+    <node name="datarecord" pkg="rosbag" type="record" 
+            args="-o $(find correlation_flow)/bag/flytest 
+                    /mavros/vision_speed/speed_twist
+                    /px4flow/opt_flow
+                    /imu/data
+                    /vicon_xb_node/viconPoseTopic"/>
+<!--
+    <node pkg="tf" type="static_transform_publisher" name="local_origin_to_imu" 
+        args="0 0 0 0 0 0 local_origin base_imu_link 50" />
+-->
+
+</launch>

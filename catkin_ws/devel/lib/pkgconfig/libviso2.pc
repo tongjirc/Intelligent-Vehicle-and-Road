@@ -1,0 +1,8 @@
+prefix=/home/tongjirc/catkin_ws/devel
+
+Name: libviso2
+Description: Description of libviso2
+Version: 0.0.1
+Cflags: -I/home/tongjirc/catkin_ws/src/viso2/libviso2/libviso2/src
+Libs: -L/home/tongjirc/catkin_ws/devel/lib -lviso2
+Requires: 

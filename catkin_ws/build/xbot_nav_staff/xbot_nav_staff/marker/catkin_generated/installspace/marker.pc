@@ -1,0 +1,8 @@
+prefix=/home/tongjirc/catkin_ws/install
+
+Name: marker
+Description: Description of marker
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tongjirc/catkin_ws/install/lib -lmarker
+Requires: rospy message_runtime std_msgs geometry_msgs visualization_msgs

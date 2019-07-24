@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/SVO/Sophus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/SVO/fast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/SVO/fast/g2o" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/SVO/g2o" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/SVO/rpg_svo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/SVO/rpg_vikit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ethzasl_ptam" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ethzasl_ptam/ptam/thirdparty/TooN/include/TooN" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ethzasl_ptam/ptam/thirdparty/gvars3/build" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ethzasl_ptam/ptam/thirdparty/gvars3/sources" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ethzasl_ptam/ptam/thirdparty/libcvd/build" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ethzasl_ptam/ptam/thirdparty/libcvd/sources" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/hector_slam" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/openslam_gmapping" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/rbx1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/rosserial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/slam_gmapping" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/viso2" vcs="Git" />
+  </component>
+</project>

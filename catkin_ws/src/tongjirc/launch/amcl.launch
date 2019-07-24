@@ -1,0 +1,79 @@
+<launch>
+  <arg name="map_file" default="/home/tongjirc/map.yaml"/>
+
+  ####  RiDAR #####################################################
+        <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+        <param name="serial_port"         type="string" value="/dev/rplidar"/>
+        <param name="serial_baudrate"     type="int"    value="115200"/>
+        <param name="frame_id"            type="string" value="laser"/>
+         <param name="inverted"            type="bool"   value="false"/>
+        <param name="angle_compensate"    type="bool"   value="true"/>
+
+        </node>
+        ####  publish an example base_link -> laser transform ###########
+
+        <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+        args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /laser 40" respawn="true"/>
+
+        ####  start rviz ################################################
+
+        <node pkg="rviz" type="rviz" name="rviz"
+        args="-d $(find laser_scan_matcher)/demo/demo_gmapping.rviz" respawn="true"/>
+
+        ####  IMU #######################################################
+        <node name = "imu" pkg = "razor_imu_9dof" type = "imu_node.py" respawn="true">
+        </node>
+
+        ####  start mapserver ############################################
+
+          <!-- Run the map server -->
+        <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+        ####  start the laser scan_matcher ##############################
+
+        <node pkg="laser_scan_matcher" type="laser_scan_matcher_node"
+        name="laser_scan_matcher_node" output="screen" respawn="true">
+        <remap from="imu/data" to="/imu"/>
+        <param name="fixed_frame" value = "map"/>
+        <param name="max_iterations" value="10"/>
+        </node>
+
+        ####  start amcl ##############################
+
+        <node pkg="amcl" type="amcl" name="amcl">
+
+        <remap from="scan" to="scan"/>
+          <!-- Publish scans from best pose at a max of 10 Hz -->
+          <param name="odom_model_type" value="omni"/>
+          <param name="odom_alpha5" value="0.1"/>
+          <param name="transform_tolerance" value="0.2" />
+          <param name="gui_publish_rate" value="10.0"/>
+          <param name="laser_max_beams" value="30"/>
+          <param name="min_particles" value="500"/>
+          <param name="max_particles" value="5000"/>
+          <param name="kld_err" value="0.05"/>
+          <param name="kld_z" value="0.99"/>
+          <param name="odom_alpha1" value="0.2"/>
+          <param name="odom_alpha2" value="0.2"/>
+          <!-- translation std dev, m -->
+          <param name="odom_alpha3" value="0.8"/>
+          <param name="odom_alpha4" value="0.2"/>
+          <param name="laser_z_hit" value="0.5"/>
+          <param name="laser_z_short" value="0.05"/>
+          <param name="laser_z_max" value="0.05"/>
+          <param name="laser_z_rand" value="0.5"/>
+          <param name="laser_sigma_hit" value="0.2"/>
+          <param name="laser_lambda_short" value="0.1"/>
+          <param name="laser_lambda_short" value="0.1"/>
+          <param name="laser_model_type" value="likelihood_field"/>
+          <!-- <param name="laser_model_type" value="beam"/> -->
+          <param name="laser_likelihood_max_dist" value="2.0"/>
+          <param name="update_min_d" value="0.2"/>
+          <param name="update_min_a" value="0.5"/>
+          <param name="odom_frame_id" value="odom"/>
+          <param name="resample_interval" value="1"/>
+          <param name="transform_tolerance" value="0.1"/>
+          <param name="recovery_alpha_slow" value="0.0"/>
+          <param name="recovery_alpha_fast" value="0.0"/>
+        </node>
+</launch>

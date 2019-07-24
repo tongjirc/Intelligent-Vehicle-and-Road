@@ -1,0 +1,15 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~ShowPC" : \b [bool] Show point cloud min: False, default: False, max: True
+- \b "~ShowAllKFs" : \b [bool] Show all keyframes ever made min: False, default: False, max: True
+- \b "~ShowKFs" : \b [bool] Show keyframes min: False, default: False, max: True
+- \b "~KFLifetime" : \b [int] KF lifetime in sec min: 1, default: 1, max: 60000
+- \b "~ShowPath" : \b [bool] Show path min: False, default: False, max: True
+- \b "~PathLength" : \b [int] Number of path anchor points min: 1, default: 1000, max: 60000
+- \b "~ExportPC" : \b [bool] export point cloud to file min: False, default: False, max: True
+- \b "~ExportPrefix" : \b [str] prefix for export point cloud to file min: , default: , max: 
+- \b "~SaveMap" : \b [bool] save full map to file min: False, default: False, max: True
+- \b "~KFFlags" : \b [int] 0:get all KFs, <0: get N newest KFs, 1: get new KFs only min: -100, default: 0, max: 1
+

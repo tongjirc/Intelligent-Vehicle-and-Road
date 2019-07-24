@@ -1,0 +1,6 @@
+
+
+<launch>
+    ####  YOLO ###################################################
+    <node name = "yolo" pkg = "yolo" type = "use_yolo1030.py" respawn="true"/>
+</launch>

@@ -1,0 +1,42 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~Scale" : \b [double] Scale min: 0.01, default: 1.0, max: 30.0
+- \b "~MotionModelSource" : \b [str] selects the source for the motion model. min: , default: CONSTANT, max: 
+- \b "~MaxPatchesPerFrame" : \b [double] max features per frame min: 10.0, default: 500.0, max: 1000.0
+- \b "~MaxKFDistWiggleMult" : \b [double] 'distance' after which a new kf is requested min: 0.1, default: 3.0, max: 10.0
+- \b "~UseKFPixelDist" : \b [bool] use AutoInitPixel as new KF request criteria min: False, default: False, max: True
+- \b "~NoLevelZeroMapPoints" : \b [bool] do not add map points at level zero min: False, default: False, max: True
+- \b "~EpiDepthSearchMaxRange" : \b [double] depth variance to search for features min: 1.0, default: 100.0, max: 100.0
+- \b "~CoarseMin" : \b [double] min number of features for coarse tracking min: 1.0, default: 20.0, max: 100.0
+- \b "~CoarseMax" : \b [double] max number of features for coarse tracking min: 1.0, default: 60.0, max: 100.0
+- \b "~CoarseRange" : \b [double] Pixel search radius for coarse features min: 1.0, default: 30.0, max: 100.0
+- \b "~CoarseSubPixIts" : \b [double] coarse tracking sub-pixel iterations min: 1.0, default: 8.0, max: 100.0
+- \b "~DisableCoarse" : \b [bool] enable/disable coarse tracking min: False, default: False, max: True
+- \b "~CoarseMinVelocity" : \b [double] speed above which coarse stage is used min: 0.0, default: 0.006, max: 1.0
+- \b "~TrackingQualityGood" : \b [double] min ratio features visible/features found for good tracking min: 0.0, default: 0.3, max: 1.0
+- \b "~TrackingQualityLost" : \b [double] max ratio features visible/features found before lost min: 0.0, default: 0.13, max: 1.0
+- \b "~TrackingQualityFoundPixels" : \b [int] min pixels to be found for good tracking min: 1, default: 100, max: 1000
+- \b "~MaxIterations" : \b [double] max iterations for bundle adjustment min: 1.0, default: 20.0, max: 100.0
+- \b "~MaxKF" : \b [int] number of keyframes kept in the map (0 or 1 = inf) min: 0, default: 0, max: 1000
+- \b "~BundleMethod" : \b [str] bundleadjustment method min: , default: LOCAL_GLOBAL, max: 
+- \b "~UpdateSquaredConvergenceLimit" : \b [double] limit for convergence in bundle adjustment min: 0.0, default: 1e-06, max: 1.0
+- \b "~BundleDebugMessages" : \b [bool] print bundle debug messages min: False, default: False, max: True
+- \b "~FASTMethod" : \b [str] FAST corner method min: , default: FAST9_nonmax, max: 
+- \b "~Thres_lvl0" : \b [int] threshold for FAST features on level 0 min: 0, default: 10, max: 255
+- \b "~Thres_lvl1" : \b [int] threshold for FAST features on level 1 min: 0, default: 15, max: 255
+- \b "~Thres_lvl2" : \b [int] threshold for FAST features on level 2 min: 0, default: 15, max: 255
+- \b "~Thres_lvl3" : \b [int] threshold for FAST features on level 3 min: 0, default: 10, max: 255
+- \b "~AdaptiveThrs" : \b [bool] adaptive threshold for corner extraction min: False, default: False, max: True
+- \b "~AdaptiveThrsMult" : \b [double] controls adaptive threshold to MaxPatches*N corners min: 0.5, default: 5.0, max: 20.0
+- \b "~RotationEstimatorBlur" : \b [double] small images for the rotation estimator blur min: 0.0, default: 0.75, max: 10.0
+- \b "~UseRotationEstimator" : \b [bool] small images for the rotation estimator enable/disable min: False, default: True, max: True
+- \b "~MiniPatchMaxSSD" : \b [int] MiniPatch tracking threshhold min: 0, default: 100000, max: 10000000
+- \b "~PlaneAlignerRansacs" : \b [int] number of dominant plane RANSACs min: 0, default: 100, max: 1000
+- \b "~RelocMaxScore" : \b [int] score for relocalization min: 0, default: 9000000, max: 90000000
+- \b "~AutoInit" : \b [bool] enable auto initialization min: False, default: False, max: True
+- \b "~CheckInitMapVar" : \b [bool] check map point variance for initial map min: False, default: False, max: True
+- \b "~AutoInitPixel" : \b [int] min pixel distance for auto initialization min: 1, default: 20, max: 100
+- \b "~MaxStereoInitLoops" : \b [int] max # of loops for stereo initialization min: 1, default: 10, max: 100
+

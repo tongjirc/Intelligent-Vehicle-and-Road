@@ -1,0 +1,8 @@
+prefix=/home/tongjirc/catkin_ws/devel
+
+Name: amcl_odom
+Description: Description of amcl_odom
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tongjirc/catkin_ws/devel/lib -lamcl_odom
+Requires: rospy

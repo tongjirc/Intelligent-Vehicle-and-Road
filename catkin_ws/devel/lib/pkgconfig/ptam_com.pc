@@ -1,0 +1,8 @@
+prefix=/home/tongjirc/catkin_ws/devel
+
+Name: ptam_com
+Description: Description of ptam_com
+Version: 0.0.1
+Cflags: -I/home/tongjirc/catkin_ws/devel/include
+Libs: -L/home/tongjirc/catkin_ws/devel/lib 
+Requires: message_runtime std_msgs geometry_msgs sensor_msgs

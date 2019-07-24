@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<launch>
+        <arg name="map_file" default="/home/tongjirc/final.yaml"/>
+
+        ####  arduino ###################################################
+        <node name = "arduino" pkg = "rosserial_python" type = "serial_node.py" required="true"/>
+        ####  IMU #######################################################
+        <node name = "imu" pkg = "razor_imu_9dof" type = "imu_node.py" required="true">
+        </node>
+        ####  LiDAR #####################################################
+        <node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+        <param name="serial_port"         type="string" value="/dev/rplidar"/>
+        <param name="serial_baudrate"     type="int"    value="115200"/>
+        <param name="frame_id"            type="string" value="laser"/>
+         <param name="inverted"            type="bool"   value="false"/>
+        <param name="angle_compensate"    type="bool"   value="true"/>
+
+        </node>
+        ####  Camera ####################################################
+        <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" respawn="true">
+        <param name="video_device" value="/dev/video0" />
+        <param name="image_width" value="640" />
+        <param name="image_height" value="480" />
+        <param name="pixel_format" value="yuyv" />
+        <param name="camera_frame_id" value="usb_cam" />
+        <param name="io_method" value="mmap"/>
+        <remap from="/usb_cam/image_raw" to="/image"/>
+        </node>
+
+        ####  DMI #######################################################
+        <node name = "screen" pkg = "tongjirc" type = "dmi.py" required="true"/>
+
+        ####  Odom #######################################################
+        <node name = "odom" pkg = "tongjirc" type = "odom.py" respawn="true"/>
+
+        ####  Marvelmind ################################################
+        <node name = "pose" pkg = "marvelmind_nav" type = "hedge_rcv_bin" respawn="true"/>
+        #### start the laser scan_matcher ##############################
+
+        <node pkg="laser_scan_matcher" type="laser_scan_matcher_node"
+        name="laser_scan_matcher_node" output="screen">
+        <param name="fixed_frame" value = "odom"/>
+        <param name="max_iterations" value="10"/>
+        <remap from="/imu/data" to="/imu"/>
+        </node>
+        ####  publish  base_link -> laser transform ###########
+
+        <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+        args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /laser 40" respawn="true"/>
+
+        ####  start mapserver ############################################
+
+          <!-- Run the map server -->
+        <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+        ####  car model   ###############################################
+        <arg name="model" />
+        <arg name="gui" default="False" />
+        <param name="robot_description" textfile="$(find tongjirc)/urdf/tongjirc.urdf" />
+        <param name="use_gui" value="$(arg gui)"/>
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node>
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+        ####  gray frame   ################################################
+        <node name="image_proc" pkg="image_proc" type="image_proc" ns="camera">
+        <remap from="camera_info" to="/image_info" />
+        <remap from="image_raw" to="/image" />
+        <remap from="image_mono" to="/mono_image" />
+        </node>
+
+        ####  SVO   #####################################################
+        <node pkg="svo_ros" type="vo" name="svo" clear_params="true">
+        <!-- Camera topic to subscribe to -->
+        <param name="cam_topic" value="/mono_image" type="str" />
+        <!-- Camera calibration file -->
+        <rosparam file="/home/tongjirc/catkin_ws/src/SVO/rpg_svo/svo_ros/param/my_camera.yaml" />
+        <!-- Default parameter settings: choose between vo_fast and vo_accurate -->
+        <rosparam file="$(find svo_ros)/param/vo_fast.yaml" />
+        </node>
+
+
+
+</launch>
+

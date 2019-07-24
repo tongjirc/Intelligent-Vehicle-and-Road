@@ -1,0 +1,2 @@
+set(marvelmind_nav_MESSAGE_FILES "/home/tongjirc/catkin_ws/src/marvelmind/msg/hedge_pos.msg;/home/tongjirc/catkin_ws/src/marvelmind/msg/hedge_pos_a.msg;/home/tongjirc/catkin_ws/src/marvelmind/msg/hedge_pos_ang.msg;/home/tongjirc/catkin_ws/src/marvelmind/msg/beacon_pos_a.msg;/home/tongjirc/catkin_ws/src/marvelmind/msg/hedge_imu_raw.msg;/home/tongjirc/catkin_ws/src/marvelmind/msg/hedge_imu_fusion.msg;/home/tongjirc/catkin_ws/src/marvelmind/msg/beacon_distance.msg")
+set(marvelmind_nav_SERVICE_FILES "")

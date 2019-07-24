@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tongjirc/catkin_ws/src/marvelmind_robotics-ros_marvelmind_package-161ebebacf04/include/marvelmind_nav/marvelmind_hedge.h
+stdint.h
+-
+stdbool.h
+-
+stddef.h
+-
+
+/home/tongjirc/catkin_ws/src/marvelmind_robotics-ros_marvelmind_package-161ebebacf04/src/marvelmind_hedge.c
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+windows.h
+-
+process.h
+-
+unistd.h
+-
+termios.h
+-
+fcntl.h
+-
+pthread.h
+-
+sys/poll.h
+-
+marvelmind_nav/marvelmind_hedge.h
+/home/tongjirc/catkin_ws/src/marvelmind_robotics-ros_marvelmind_package-161ebebacf04/src/marvelmind_nav/marvelmind_hedge.h
+

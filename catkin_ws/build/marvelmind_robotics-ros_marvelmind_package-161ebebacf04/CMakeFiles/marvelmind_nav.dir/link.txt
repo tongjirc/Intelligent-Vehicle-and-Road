@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC   -shared -Wl,-soname,libmarvelmind_nav.so -o /home/tongjirc/catkin_ws/devel/lib/libmarvelmind_nav.so CMakeFiles/marvelmind_nav.dir/src/marvelmind_hedge.c.o 

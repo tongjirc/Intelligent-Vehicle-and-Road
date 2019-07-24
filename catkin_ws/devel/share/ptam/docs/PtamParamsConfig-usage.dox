@@ -1,0 +1,43 @@
+\subsubsection usage Usage
+\verbatim
+<node name="Config" pkg="ptam" type="Config">
+  <param name="Scale" type="double" value="1.0" />
+  <param name="MotionModelSource" type="str" value="CONSTANT" />
+  <param name="MaxPatchesPerFrame" type="double" value="500.0" />
+  <param name="MaxKFDistWiggleMult" type="double" value="3.0" />
+  <param name="UseKFPixelDist" type="bool" value="False" />
+  <param name="NoLevelZeroMapPoints" type="bool" value="False" />
+  <param name="EpiDepthSearchMaxRange" type="double" value="100.0" />
+  <param name="CoarseMin" type="double" value="20.0" />
+  <param name="CoarseMax" type="double" value="60.0" />
+  <param name="CoarseRange" type="double" value="30.0" />
+  <param name="CoarseSubPixIts" type="double" value="8.0" />
+  <param name="DisableCoarse" type="bool" value="False" />
+  <param name="CoarseMinVelocity" type="double" value="0.006" />
+  <param name="TrackingQualityGood" type="double" value="0.3" />
+  <param name="TrackingQualityLost" type="double" value="0.13" />
+  <param name="TrackingQualityFoundPixels" type="int" value="100" />
+  <param name="MaxIterations" type="double" value="20.0" />
+  <param name="MaxKF" type="int" value="0" />
+  <param name="BundleMethod" type="str" value="LOCAL_GLOBAL" />
+  <param name="UpdateSquaredConvergenceLimit" type="double" value="1e-06" />
+  <param name="BundleDebugMessages" type="bool" value="False" />
+  <param name="FASTMethod" type="str" value="FAST9_nonmax" />
+  <param name="Thres_lvl0" type="int" value="10" />
+  <param name="Thres_lvl1" type="int" value="15" />
+  <param name="Thres_lvl2" type="int" value="15" />
+  <param name="Thres_lvl3" type="int" value="10" />
+  <param name="AdaptiveThrs" type="bool" value="False" />
+  <param name="AdaptiveThrsMult" type="double" value="5.0" />
+  <param name="RotationEstimatorBlur" type="double" value="0.75" />
+  <param name="UseRotationEstimator" type="bool" value="True" />
+  <param name="MiniPatchMaxSSD" type="int" value="100000" />
+  <param name="PlaneAlignerRansacs" type="int" value="100" />
+  <param name="RelocMaxScore" type="int" value="9000000" />
+  <param name="AutoInit" type="bool" value="False" />
+  <param name="CheckInitMapVar" type="bool" value="False" />
+  <param name="AutoInitPixel" type="int" value="20" />
+  <param name="MaxStereoInitLoops" type="int" value="10" />
+</node>
+\endverbatim
+

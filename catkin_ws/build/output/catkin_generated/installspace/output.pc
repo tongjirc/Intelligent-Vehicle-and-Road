@@ -1,0 +1,8 @@
+prefix=/home/tongjirc/catkin_ws/install
+
+Name: output
+Description: Description of output
+Version: 0.0.0
+Cflags: -I/home/tongjirc/catkin_ws/install/include
+Libs: -L/home/tongjirc/catkin_ws/install/lib -loutput
+Requires: roscpp rospy std_msgs message_runtime
