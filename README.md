@@ -15,9 +15,9 @@ CAV Test and Evaluation
 We developed a testbed for cooperative vehicle-infrastructure system (CVIS). The testbed include two parts (i.e., A vehicle-in-the-loop test platform and a scaled-vehicle-in-the-loop test platform). Two testbeds used augmented reality technology to test connected and automated vehicle, which build a virtual environment in the [VISSIM](https://vision-traffic.ptvgroup.com/en-us/products/ptv-vissim/) (a powerful microscopic simulation software).
 * The vehicle-in-the-loop platform
 
-<bar><div align=center><img width="300" height="225" src="http://github.com/tongjirc/Intelligent-Vehicle-and-Road/raw/master/CAV%20Test%20and%20Evaluation/image/scaledvehicle.png"/></div>
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/CAV%20Test%20and%20Evaluation/IMG/real.png"/></div>
 * The scaled-vehicle-in-the-loop test platform
-<bar><div align=center><img width="300" height="225" src="http://github.com/tongjirc/Intelligent-Vehicle-and-Road/raw/master/CAV%20Test%20and%20Evaluation/image/real.png"/></div>
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/CAV%20Test%20and%20Evaluation/IMG/scaledvehicle.png"/></div>
 
 1）CAV Vehicle Data
 ----
