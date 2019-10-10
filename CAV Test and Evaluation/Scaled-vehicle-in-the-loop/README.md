@@ -1,35 +1,30 @@
-Tongji intelligent-Vehicle-and-Road
+Scaled-Vehicle-in-the-loop Testbed
 ====
-The intelligent-vehicle-and-road project is a development platform for the cooperative vehicle-infrastructure system from Tongji University. The main purpose of this project is to achieve vehicle-infrastructure integration in the near future. As we known, the vehicle-infrastructure integration will be completed in three steps:<br>
+This part mainly depends on [AtsushiSakai](https://github.com/AtsushiSakai/PythonRobotics) and [Barc](https://github.com/MPC-Berkeley/barc) work. we build a 10/1 scaled automated vehicle (SAV). This vehicle can control the steering and torque of the vehicle through the ESC. So we can assemble an autonomous vehicle by hand.<bar>
 
-<ol>
-<li> Information interaction</li>
-<li> Perception and planning integration</li>
-<li> Vehicle-infrastructure integration</li>
-</ol>
-
-<bar>This site is home to the repository. The main site of our group is [here](http://mawanjing.com/), our work include three parts.<bar>
-
-1）CAV Test and Evaluation
+1）Onboard Hardware
 ----
-We developed a testbed for cooperative vehicle-infrastructure system (CVIS). The testbed include two parts (i.e., A vehicle-in-the-loop test platform and a scaled-vehicle-in-the-loop test platform). Two testbeds used augmented reality technology to test connected and automated vehicle, which build a virtual environment in the [VISSIM](https://vision-traffic.ptvgroup.com/en-us/products/ptv-vissim/) (a powerful microscopic simulation software).
-* The vehicle-in-the-loop platform
+<bar><div align=center><img width="800" height="250" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/hardware.png"/></div>
+As shown in Figure, the SAV contains five sensors. It uses a 640*480 high-speed monocular camera to capture images in front of the vehicle. The IMU is one of the most important sensors in the modern vehicles. This study uses the SparkFun Razor IMU module to collect vehicle accelerations, angular velocities and orientations. The microcontroller is the Arduino Nano module to measure the manual controller PWM signals and to relay the control commands from the microcomputer to the vehicle base. The indoor GPS uses the Marvelmind indoor positioning kit to replace the differential global positioning system (DGPS) signal in the field. It can obtain a positioning signal with the frequency of 3-20 Hz and the error of 2 cm, which is one tenth of the widely used DGPS error in the field. This study uses rplidar-A2 to obtain point cloud signals in the 6 m range because LiDAR is the most accurate distance sensor. The IMU and LiDAR can be used for map construction and state estimation, which are packaged in a software package named gmapping . The charging treasure with 190 w power is used to supply power to the microcomputer to ensure stable operation of the microcomputer. The microcomputer uses Intel Nuc, which can complete most computing tasks.
+ <bar>
 
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/real.png"/></div>
-* The scaled-vehicle-in-the-loop test platform
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/scaledvehicle.png"/></div>
-
-2）CAV Vehicle Data
+2）Onboard Software
 ----
-This part is mainly for data collection and storage. First, We developed a crawler to capture the data from Gaode Map. Using the developer API to get the online data from the web. Second, we store the data from the project above, including data from simulation software and the sensors.
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/onboard_software.png"/></div>
+We use the PyQt5 to estabulish the main form on board, which can monitor the status of the vehicle and do some motion control through the button. [ROS](http://wiki.ros.org/ROS/Introduction) (Robotic Operating System) is used to connected sensors together.
 
-3）CAV Control and Planning Algorithm
-----
-This part is mainly for CAV control and planning algorithm. This part will be the main part of our research. With the roadside joining the Automated vehicle system, the automated vehicle is going to find the new balance between the UE(user equilibrium) and SO(system optimum), which will lead to a huge reform in the automated vehicles.
++ Mapping Algorithm
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/mapping.png"/></div>
+SAV uses gmapping algorithm to generate the map and at the same time as a electrical odometry. More information you can visit [here](https://ieeexplore.ieee.org/document/7480175/)
 
-Useful Resources
-----
-Recommended reading and resources
-+ [A Gentle Introduction to ROS](https://cse.sc.edu/~jokane/agitr/), by Jason M. O'Kane, and this [basic tutorial](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29) for writing ROS nodes in python
-+ [Julia JuMP](https://jump.readthedocs.io/en/latest/), Mathematical Programming using the Julia programming language
-+ [Git - the simple guide](http://rogerdudler.github.io/git-guide/), or for a more in-depth reading, consider [this](https://www.atlassian.com/git/tutorials/ ) tutorial by Atlassian
++ Vehicle Model
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/ackman_model.png"/></div>
+The ackerman bicycle model is a well-known method to simplify a vehicle. The vehicle center of the mass is assumed to be located at the midpoint of the rear axle. The state [X,Y,ψ,v] of the center can be obtained by solving the kinematic equations. More information you can visit [here](https://ieeexplore.ieee.org/document/7995816)
+
++ Trajectory Planning
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/planning.gif"/></div>
+We use the quintic polynomials planning algorithm to generate an optimal trajectory. More information you can visit [here](https://ieeexplore.ieee.org/document/637936)
+
++ Trajectory Control
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/trajectory_tracking.gif"/></div>
+Base on the unicycle model, the vehicle control problem is formulated into a nonlinear model predictive control model. More information you can visit [here](https://ieeexplore.ieee.org/abstract/document/7995816)
