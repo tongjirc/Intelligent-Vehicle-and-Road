@@ -4,7 +4,7 @@ This part mainly depends on [AtsushiSakai](https://github.com/AtsushiSakai/Pytho
 
 1）Onboard Hardware
 ----
-<bar><div align=center><img width="600" height="300" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/hardware.png"/></div>
+<bar><div align=center><img width="800" height="300" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/hardware.png"/></div>
 
 2）Onboard Software
 ----
