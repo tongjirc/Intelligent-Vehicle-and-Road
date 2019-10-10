@@ -1,2 +1,0 @@
-set(output_MESSAGE_FILES "msg/RCInput.msg")
-set(output_SERVICE_FILES "")

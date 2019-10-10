@@ -1,2 +1,0 @@
-set(output_MESSAGE_FILES "/home/tongjirc/catkin_ws/src/Tongjirc/msg/RCInput.msg")
-set(output_SERVICE_FILES "")

@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/install
-
-Name: slam_gampping
-Description: Description of slam_gampping
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/tongjirc/catkin_ws/install/lib 
-Requires: tf roscpp sensor_msgs

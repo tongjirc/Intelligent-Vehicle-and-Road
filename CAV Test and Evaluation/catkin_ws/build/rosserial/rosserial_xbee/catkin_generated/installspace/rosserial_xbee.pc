@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/install
-
-Name: rosserial_xbee
-Description: Description of rosserial_xbee
-Version: 0.8.0
-Cflags: 
-Libs: -L/home/tongjirc/catkin_ws/install/lib 
-Requires: 

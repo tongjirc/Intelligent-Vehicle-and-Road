@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/install
-
-Name: marvelmind_nav
-Description: Description of marvelmind_nav
-Version: 1.0.8
-Cflags: -I/home/tongjirc/catkin_ws/install/include
-Libs: -L/home/tongjirc/catkin_ws/install/lib 
-Requires: message_runtime

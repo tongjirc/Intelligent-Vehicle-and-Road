@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/devel
-
-Name: viso2_ros
-Description: Description of viso2_ros
-Version: 0.0.1
-Cflags: -I/home/tongjirc/catkin_ws/devel/include
-Libs: -L/home/tongjirc/catkin_ws/devel/lib 
-Requires: 

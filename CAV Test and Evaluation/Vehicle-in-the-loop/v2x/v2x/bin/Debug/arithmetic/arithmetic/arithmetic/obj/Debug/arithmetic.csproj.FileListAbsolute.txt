@@ -1,0 +1,15 @@
+C:\Users\lenovo\Desktop\arithmetic\arithmetic\arithmetic\bin\Debug\arithmetic.dll.config
+C:\Users\lenovo\Desktop\arithmetic\arithmetic\arithmetic\bin\Debug\arithmetic.dll
+C:\Users\lenovo\Desktop\arithmetic\arithmetic\arithmetic\bin\Debug\arithmetic.pdb
+C:\Users\lenovo\Desktop\arithmetic\arithmetic\arithmetic\obj\Debug\arithmetic.dll
+C:\Users\lenovo\Desktop\arithmetic\arithmetic\arithmetic\obj\Debug\arithmetic.pdb
+C:\Users\lenovo\Desktop\v2xniubi\v2x\v2x-\v2x\v2x\bin\Debug\arithmetic.dll.config
+C:\Users\lenovo\Desktop\v2xniubi\v2x\v2x-\v2x\v2x\bin\Debug\arithmetic.dll
+C:\Users\lenovo\Desktop\v2xniubi\v2x\v2x-\v2x\v2x\bin\Debug\arithmetic.pdb
+C:\Users\lenovo\Desktop\arithmetic\arithmetic\arithmetic\obj\Debug\arithmetic.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\v2x\v2x\v2x\bin\Debug\arithmetic.dll.config
+C:\Users\lenovo\Desktop\v2x\v2x\v2x\bin\Debug\arithmetic\arithmetic\arithmetic\obj\Debug\arithmetic.dll
+C:\Users\lenovo\Desktop\v2x\v2x\v2x\bin\Debug\arithmetic\arithmetic\arithmetic\obj\Debug\arithmetic.pdb
+C:\Users\lenovo\Desktop\v2x\v2x\v2x\bin\Debug\arithmetic.dll
+C:\Users\lenovo\Desktop\v2x\v2x\v2x\bin\Debug\arithmetic.pdb
+C:\Users\lenovo\Desktop\v2x\v2x\v2x\bin\Debug\arithmetic\arithmetic\arithmetic\obj\Debug\arithmetic.csprojResolveAssemblyReference.cache

@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/install
-
-Name: openslam_gmapping
-Description: Description of openslam_gmapping
-Version: 0.1.2
-Cflags: -I/home/tongjirc/catkin_ws/install/include
-Libs: -L/home/tongjirc/catkin_ws/install/lib -lgridfastslam -lscanmatcher -lsensor_base -lsensor_range -lsensor_odometry -lutils
-Requires: 

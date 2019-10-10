@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/devel
-
-Name: video_stream_opencv
-Description: Description of video_stream_opencv
-Version: 1.1.4
-Cflags: 
-Libs: -L/home/tongjirc/catkin_ws/devel/lib 
-Requires: 

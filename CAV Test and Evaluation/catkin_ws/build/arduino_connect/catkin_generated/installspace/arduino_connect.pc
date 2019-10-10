@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/install
-
-Name: arduino_connect
-Description: Description of arduino_connect
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/tongjirc/catkin_ws/install/lib 
-Requires: 

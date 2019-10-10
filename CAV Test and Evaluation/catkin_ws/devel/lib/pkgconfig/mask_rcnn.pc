@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/devel
-
-Name: mask_rcnn
-Description: Description of mask_rcnn
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/tongjirc/catkin_ws/devel/lib 
-Requires: 

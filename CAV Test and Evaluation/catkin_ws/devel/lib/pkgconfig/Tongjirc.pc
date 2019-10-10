@@ -1,8 +1,0 @@
-prefix=/home/tongjirc/catkin_ws/devel
-
-Name: Tongjirc
-Description: Description of Tongjirc
-Version: 0.0.0
-Cflags: -I/home/tongjirc/catkin_ws/devel/include -I/home/tongjirc/catkin_ws/src/tongjirc/include
-Libs: -L/home/tongjirc/catkin_ws/devel/lib -lTongjirc
-Requires: roscpp rospy std_msgs message_runtime
