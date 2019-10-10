@@ -1,14 +1,23 @@
-CAV Test and Evaluation
+Scaled-Vehicle-in-the-loop Testbed
 ====
-This part have two sections or stages. Basicly, we established an augment reality based CAV testbed based on [Dr.Yu's](https://www.researchgate.net/profile/Chunhui_Yu) previous work. Then, we build a scaled vehicle testbed for indoor evaluation.
+This part mainly depends on [AtsushiSakai](https://github.com/AtsushiSakai/PythonRobotics) and [Barc](https://github.com/MPC-Berkeley/barc) work. we build a 10/1 scaled vehicle. This vehicle can control the steering and torque of the vehicle through the ESC. So we can assemble an autonomous vehicle by hand.<bar>
 
-1）VeIL Simulation Testbed
+1）Onboard Hardware
 ----
-The main task of this section is to use VISSIM's secondary development technology to send the internal simulation environment of VISSIM (including pedestrians, non-motor vehicles, vehicles and transportation facilities) to the real environment, using standard message frames in the V2X message set ( RSI, BSM, MAP, SPat, RSM) are sent to vehicles and facilities in real-world scenarios. Scenes and facilities become a part of the simulation, and the test environments rely on augmented reality technology. This environment can effectively improve the speed and quality of CAV testing.
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/hardware.png"/></div>
 
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/roadside.png"/></div>
-
-2）Scaled-Vehicle-in-the-Loop Testbed
+2）Onboard Software
 ----
-This section describes scaled-vehicle-in-the-loop testbed. Real vehicles are often costly in the real test environment. Setting up a 10/1 scaled test environment in the lab can effectively reduce the cost of testing and avoid various types of unpredictable conditions (such as irregular friction, weather, etc.) in the real test site. The indoor test platform built a miniature test platform in the Tongji University laboratory.
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/structure.png"/></div>
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/onboard_software.png"/></div>
+
++ Mapping Algorithm
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/mapping.png"/></div>
+
++ Vehicle Model
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/ackman_model.png"/></div>
+
++ Trajectory Planning
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/planning.gif"/></div>
++ Trajectory Control
+
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/trajectory_tracking_gif"/></div>
