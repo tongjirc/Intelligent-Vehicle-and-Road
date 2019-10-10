@@ -11,8 +11,8 @@ This section controls the traffic subjects (including vehicles, signal lights, V
 2）Solve Algorithm
 ----
 This section solves model above. The solution includes solving with the solver ([Gurobi](https://www.gurobi.com/) ,[CPLEX](https://www.ibm.com/analytics/cplex-optimizer), [OR-tools](https://developers.google.com/optimization)) and solving algorithm (e.g., Tabu Search, Ant Colony Optimization, Particle Swarm Optimization etc.).
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/gurobi.png"/></div>
+<bar><div align=center><img width="300" height="100" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/gurobi.png"/></div>
 3）GUI Tools
 ----
 This section is used to better demonstrate the results of the model solution, including traffic operation display ([SUMO](http://sumo.sourceforge.net/)) and model effect display ([Echarts](https://www.echartsjs.com/zh/index.html)).
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/SUMO.png"/><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/echarts.png"/></div>
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/SUMO.png"/><img width="400" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/echarts.png"/></div>
