@@ -28,3 +28,16 @@ We use the quintic polynomials planning algorithm to generate an optimal traject
 + Trajectory Control
 <bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/trajectory_tracking.gif"/></div>
 Base on the unicycle model, the vehicle control problem is formulated into a nonlinear model predictive control model. More information you can visit [here](https://ieeexplore.ieee.org/abstract/document/7995816)
+
+Directory Introduction
+----
+The following directories include three parts on the scaled vehicle.
+
++ sketchbook
+sketchbook stores the code on the Arduino Nano. It's programmed by C.
+
++ Razor_AHRS
+sketchbook stores the code on the Razor IMU. It's programmed by C.
+
++ catkin_ws
+sketchbook stores the code on the onboard computer. It's programmed by python, C and C++.
