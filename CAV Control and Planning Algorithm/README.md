@@ -1,6 +1,6 @@
 CAV Control and Planning algorithm
 ====
-This part have three stages, including model establishment, solve algorithm, and GUI tools.
+This part have three stages, including traffic model establishment, solve algorithm, and GUI tools.
 
 1）Model Establishment
 ----
