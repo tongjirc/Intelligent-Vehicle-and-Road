@@ -33,11 +33,11 @@ Directory Introduction
 ----
 The following directories include three parts on the scaled vehicle.
 
-+ sketchbook
++ sketchbook:
 <bar>sketchbook stores the code on the Arduino Nano. It's programmed by C.
 
-+ Razor_AHRS
++ Razor_AHRS:
 <bar>sketchbook stores the code on the Razor IMU. It's programmed by C.
 
-+ catkin_ws
++ catkin_ws:
 <bar>sketchbook stores the code on the onboard computer. It's programmed by python, C and C++.
