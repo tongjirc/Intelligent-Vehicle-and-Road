@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <sumo>
+    <python-script>SUMO\SUMOAPI.py</python-script>
+  </sumo>
+  <network>
+    <connector-speed>
+      <l comments="left-turning direction, m/s">8</l>
+      <s comments="straight direction, m/s">10</s>
+      <r comments="right-turning direction, m/s">6</r>
+    </connector-speed>
+    <connector-radius>
+      <l comments="left-turning radius, m">40</l>
+      <s comments="straight radius, m">100</s>
+      <r comments="right-turning radius, m">20</r>
+    </connector-radius>
+    <connector-travel-time-diff read="true">
+        <pre-conn id=":J1_0_0">
+          <fol-conn id=":J1_1_0">
+            <time-diff>0</time-diff>
+          </fol-conn>
+          <fol-conn id=":J1_2_0">
+            <time-diff>0</time-diff>
+          </fol-conn>
+          <fol-conn id=":J1_10_0">
+            <time-diff>-0.88791261823450274</time-diff>
+          </fol-conn>
+          <fol-conn id=":J1_20_0">
+            <time-diff>-2.0088527968495136</time-diff>
+          </fol-conn>
+        </pre-conn>
+    </connector-travel-time-diff>
+  </network>
+  <optimizer>
+    <time-limit comments="s">Infinity</time-limit>
+    <optimality-tol comments="defalut: 1e-6; min: 1e-9; max:1e-2">1e-3</optimality-tol>
+    <mip-gap-abs comments="defalut: 1e-10; min:0; max:Infinity">1e-2</mip-gap-abs>
+    <mip-gap comments="defalut:1e-4; min:0; max: Infinity">1e-3</mip-gap>
+    <output-flag comments="1 if true;0, otherwise">0</output-flag>
+    <mip-focus comments="0:balance; 1:feasible; 2:optimality; 3:bound">0</mip-focus>
+    <improve-start-time comments="defalut:Infinity; min:0; max:Infinity">30</improve-start-time>
+    <M>1500</M>
+    <batch-optimize comments="1, optimize all newly loaded vehicles at one time; 0, optimize newly loaded vehicles one by one">0</batch-optimize>
+    <Arr>10</Arr>
+  </optimizer>
+  <model>
+    <w1 comments="weighting for depart time in final link">400</w1>
+    <w2 comments="weighting for depart time in other links">1</w2>
+  </model>
+  <simulation>
+    <sim-num>1</sim-num>
+	<ctrl-pattern comments="0: fixed-time control; 1: optimization-based CAV control">1</ctrl-pattern>
+  </simulation>
+  <planning>
+    <T comments="initial planning horizon, s">25</T>
+    <DT comments="Step length of planning horizon, s">2</DT>
+    <lazy-plan comments="1, if true; 0, otherwise">1</lazy-plan>
+     <ALLOWINDEX comments="allow enter lanes index">1</ALLOWINDEX>
+  </planning>
+  <safety>
+    <safe-length comments="No lane change area, m">5</safe-length>
+    <safe-gap comments="Safety gap at conflict points, s">0.7</safe-gap>
+  </safety>
+  <outputs>
+	
+    <output-path comments="leave blank if no outputs">C:\Users\lenovo\Desktop\outputdata\Outputs.txt</output-path>
+	<!--
+	<output-path comments="leave blank if no outputs">C:\Users\lenovo\Desktop\Outputs.txt</output-path>
+	-->
+    <snapshot-path comments="leave blank if no snapshots">C:\Users\lenovo\Desktop\outimage\Image.png</snapshot-path>
+    <!--
+	<snapshot-path comments="leave blank if no snapshots">C:\Users\lenovo\Desktop\Image.png</snapshot-path>
+	-->
+  </outputs>
+</parameters>

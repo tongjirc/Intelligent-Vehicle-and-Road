@@ -10,14 +10,14 @@ The intelligent-vehicle-and-road project is a development platform for the coope
 
 <bar>This site is home to the repository. The main site of our group is [here](http://mawanjing.com/), our work include three parts.<bar>
 
-1)CAV Test and Evaluation
+1）CAV Test and Evaluation
 ----
 We developed a testbed for cooperative vehicle-infrastructure system (CVIS). The testbed include two parts (i.e., A vehicle-in-the-loop test platform and a scaled-vehicle-in-the-loop test platform). Two testbeds used augmented reality technology to test connected and automated vehicle, which build a virtual environment in the [VISSIM](https://vision-traffic.ptvgroup.com/en-us/products/ptv-vissim/) (a powerful microscopic simulation software).
 * The vehicle-in-the-loop platform
 
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/CAV%20Test%20and%20Evaluation/IMG/real.png"/></div>
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/real.png"/></div>
 * The scaled-vehicle-in-the-loop test platform
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/CAV%20Test%20and%20Evaluation/IMG/scaledvehicle.png"/></div>
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/scaledvehicle.png"/></div>
 
 2）CAV Vehicle Data
 ----

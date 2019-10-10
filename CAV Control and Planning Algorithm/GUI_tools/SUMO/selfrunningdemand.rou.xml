@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes>
+	<!-- Vehicle Type -->
+	<vType id="AV" length="4.5" width="1.6" guiShape="passenger/sedan" maxSpeed="100" accel="0" decel="0" tau="0.5" minGap="1.5" sigma="0" departSpeed="0" speedMode="0"/>
+	<route id="flow_AB" edges="gneE9" color="0.98,0.83,0.16"/>
+  <route id="flow_AC" edges="gneE9" color="0.98,0.83,0.16"/>
+  <route id="flow_AD" edges="gneE9" color="0.98,0.83,0.16"/>
+  <route id="flow_BA" edges="gneE10" color="0.98,0.83,0.16"/>
+  <route id="flow_BC" edges="gneE10" color="0.98,0.83,0.16"/>
+  <route id="flow_BD" edges="gneE10" color="0.98,0.83,0.16"/>
+  <route id="flow_CA" edges="gneE11" color="0.98,0.83,0.16"/>
+  <route id="flow_CB" edges="gneE11" color="0.98,0.83,0.16"/>
+  <route id="flow_CD" edges="gneE11" color="0.98,0.83,0.16"/>
+  <route id="flow_DA" edges="gneE12" color="0.98,0.83,0.16"/>
+  <route id="flow_DB" edges="gneE12" color="0.98,0.83,0.16"/>
+  <route id="flow_DC" edges="gneE12" color="0.98,0.83,0.16"/>
+  
+  
+
+	<!-- Traffic Demands -->
+  <OD id="flow_AB" start="gneJ10" end="gneJ12" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="45" type="AV"/>
+  <OD id="flow_AC" start="gneJ10" end="gneJ14" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="75" type="AV"/>
+  <OD id="flow_AD" start="gneJ10" end="gneJ16" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="60" type="AV"/>
+  <OD id="flow_BA" start="gneJ12" end="gneJ10" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="135" type="AV"/>
+  <OD id="flow_BC" start="gneJ12" end="gneJ14" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="45" type="AV"/>
+  <OD id="flow_BD" start="gneJ12" end="gneJ16" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="225" type="AV"/>
+  <OD id="flow_CA" start="gneJ14" end="gneJ10" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="75" type="AV"/>
+  <OD id="flow_CB" start="gneJ14" end="gneJ12" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="60" type="AV"/>
+  <OD id="flow_CD" start="gneJ14" end="gneJ16" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="30" type="AV"/>
+  <OD id="flow_DA" start="gneJ16" end="gneJ10" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="45" type="AV"/>
+  <OD id="flow_DB" start="gneJ16" end="gneJ12" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="225" type="AV"/>
+  <OD id="flow_DC" start="gneJ16" end="gneJ14" startindex="0" endindex="1" begin="0" departPos="0" departSpeed="0" departLane="free" vehsPerHour="135" type="AV"/>
+  
+	
+</routes>

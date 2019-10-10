@@ -1,0 +1,28 @@
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+  <input>
+    <net-file value="C:\Users\lenovo\Desktop\selfrunning2.net.xml"/>
+    <route-files value="C:\Users\lenovo\Desktop\selfrunningdemand.rou.xml"/>
+ <gui-settings-file value="C:\Users\lenovo\Desktop\Visualization.settings.xml"/>
+  </input>
+  <time>
+    <begin value="0"/>
+    <end value ="400"/>
+    <step-length value="1"/>
+  </time>
+
+	<processing>
+        <time-to-teleport value="-1"/>
+		<tls.all-off value="true"/>
+    </processing>
+  
+	<random-number>
+		<random value="false"></random>
+		<seed value="1212"></seed>
+	</random-number>
+	
+	<gui-only>
+		<start value="true"/>
+		<quit-on-end value="true"/>
+	</gui-only>
+</configuration>
