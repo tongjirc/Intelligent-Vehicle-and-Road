@@ -4,7 +4,7 @@ This part mainly depends on [AtsushiSakai](https://github.com/AtsushiSakai/Pytho
 
 1）Onboard Hardware
 ----
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/hardware.png"/></div>
+<bar><div align=center><img width="600" height="300" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/hardware.png"/></div>
 
 2）Onboard Software
 ----
@@ -20,4 +20,4 @@ This part mainly depends on [AtsushiSakai](https://github.com/AtsushiSakai/Pytho
 <bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/planning.gif"/></div>
 + Trajectory Control
 
-<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/trajectory_tracking_gif"/></div>
+<bar><div align=center><img width="300" height="225" src="https://github.com/tongjirc/Intelligent-Vehicle-and-Road/blob/master/IMG/trajectory_tracking.gif"/></div>
